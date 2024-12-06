@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farewell for Our Beloved Teacher</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" />
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f3f4f6; /* Soft light gray background */
+            color: #333;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Fade-in animation for sections */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Scroll to top button styling */
+        #scrollToTop {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #333; /* Dark gray background */
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+        }
+        #scrollToTop:hover {
+            background-color: #555; /* Darker gray */
+        }
+        /* Gallery styling */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px; /* Space between images */
+        }
+        .gallery a {
+            display: block;
+            overflow: hidden;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .gallery a:hover img {
+            transform: scale(1.05); /* Zoom effect */
+        }
+        .gallery a:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Hover shadow effect */
+        }
+        /* Section padding and background colors */
+        section {
+            padding: 4rem 0;
+        }
+        .bg-gray-600 {
+            background-color: #333;
+        }
+        .bg-gray-100 {
+            background-color: #f7fafc;
+        }
+        .bg-white {
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="bg-gray-600 text-white py-20 text-center">
+        <h1 class="text-5xl font-extrabold">Selamat Jalan, Guru Tercinta</h1>
+        <p class="mt-6 text-lg font-light italic max-w-2xl mx-auto">
+            "Terkadang kita harus berpisah, meskipun kita masih ingin berpelukan. Seperti saat kita harus pergi ke toilet di tengah kelas."
+        </p>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-10">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-xl font-bold text-gray-700">Farewell</div>
+            <div class="flex space-x-6">
+                <a href="#kenangan" class="text-gray-700 hover:text-gray-900 transition duration-300">Kenangan</a>
+                <a href="#pesan" class="text-gray-700 hover:text-gray-900 transition duration-300">Pesan dan Kesan</a>
+                <a href="#galeri" class="text-gray-700 hover:text-gray-900 transition duration-300">Galeri Foto</a>
+                <a href="#terima-kasih" class="text-gray-700 hover:text-gray-900 transition duration-300">Ucapan Terima Kasih</a>
+                <a href="#tentang" class="text-gray-700 hover:text-gray-900 transition duration-300">Tentang Guru</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Kenangan Section -->
+    <section id="kenangan" class="bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-600 fade-in">Jejak Langkah Bersama Guru</h2>
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="p-8 bg-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow fade-in">
+                    <h3 class="text-xl font-semibold text-gray-800">Cerita Perjalanan</h3>
+                    <p class="mt-4 text-gray-600">Timeline interaktif tentang perjalanan karier sang guru, di mana setiap momen berharga seperti ujian yang tak terduga.</p>
+                </div>
+                <div class="p-8 bg-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow fade-in">
+                    <h3 class="text-xl font-semibold text-gray-800">Kisah Murid-Murid</h3>
+                    <p class="mt-4 text-gray-600">Kisah kecil dari murid-murid tentang pengalaman bersama guru, termasuk saat kita semua berusaha keras untuk tidak tertidur di kelas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pesan dan Kesan Section -->
+    <section id="pesan" class="bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-600 fade-in">Pesan Cinta dari Kami</h2>
+            <div class="mt-12 max-w-lg mx-auto">
+                <form id="whatsappForm" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700">Nama:</label>
+                        <input type="text" id="name" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-gray-500 focus:border-gray-500" placeholder="Nama Anda" required>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700">Pesan:</label>
+                        <textarea id="message" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-gray-500 focus:border-gray-500" rows="4" placeholder="Pesan Anda" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-3 bg-gray-600 text-white font-medium rounded-lg hover:bg-gray-700 transition duration-300">Kirim Pesan</button>
+                </form>
+                <div id="formFeedback" class="mt-4 text-center text-green-600 hidden">Pesan Anda telah dikirim!</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeri Foto Section -->
+<section id="galeri" class="bg-white">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center text-gray-600 fade-in">Potret Indah Kebersamaan</h2>
+        <div id="gallery" class="mt-12 gallery">
+            <a href="./asset/RESLYGART.png" data-lightbox="gallery" style="width: 150px; transform: rotate(-10deg);" class="rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                <img src="./asset/RESLYGART.png" alt="Foto 1" class="rounded-xl">
+            </a>
+            <a href="./asset/WhatsApp Image 2024-12-06 at 17.35.16_5cb03cb7.jpg" data-lightbox="gallery" style="width: 200px; transform: rotate(5deg);" class="rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                <img src="./asset/WhatsApp Image 2024-12-06 at 17.35.16_5cb03cb7.jpg" alt="Foto 2" class="rounded-xl">
+            </a>
+            <a href="https://via.placeholder.com/600" data-lightbox="gallery" style="width: 150px; transform: rotate(-10deg);" class="rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                <img src="https://via.placeholder.com/300" alt="Foto 1" class="rounded-xl">
+            </a>
+            <a href="https://via.placeholder.com/600" data-lightbox="gallery" style="width: 200px; transform: rotate(5deg);" class="rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                <img src="https://via.placeholder.com/300" alt="Foto 2" class="rounded-xl">
+            </a>
+        </div>
+        <!-- "Selengkapnya" Button -->
+        <div class="text-center mt-8">
+            <a href="./selengkapnya.html" class="px-6 py-3 text-white bg-gray-600 rounded-lg hover:bg-gray-700 transition duration-300">
+                Selengkapnya
+            </a>
+        </div>
+    </div>
+</section>
+
+    <!-- Tentang Guru Section -->
+    <section id="tentang" class="bg-gray-100">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-gray-600 fade-in">Tentang Guru</h2>
+            <p class="mt-6 text-lg text-gray-700">
+                Guru kami telah mengabdikan dirinya selama lebih dari 30 tahun untuk mendidik generasi muda dengan penuh kasih sayang, kesabaran, dan dedikasi. "Seperti kopi yang pahit, kadang kita perlu sedikit gula untuk membuatnya lebih manis."
+            </p>
+        </div>
+    </section>
+
+    <!-- Ucapan Terima Kasih Section -->
+    <section id="terima-kasih" class="bg-gray-100">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-gray-600 fade-in">Terima Kasih, Guru Kami</h2>
+            <p class="mt-6 text-lg text-gray-700">
+                Kami mengucapkan terima kasih atas segala pengorbanan dan bimbingan yang telah diberikan selama ini. Semoga segala kebaikan yang Anda berikan kembali kepada Anda berkali-kali lipat.
+            </p>
+        </div>
+    </section>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" aria-label="Scroll to top">
+        ↑
+    </button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Fade in effect
+            const fadeElements = document.querySelectorAll('.fade-in');
+            window.addEventListener('scroll', () => {
+                fadeElements.forEach(el => {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top <= window.innerHeight * 0.8) {
+                        el.classList.add('visible');
+                    }
+                });
+            });
+
+            // Scroll to top button
+            const scrollToTopBtn = document.getElementById('scrollToTop');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    scrollToTopBtn.style.display = 'block';
+                } else {
+                    scrollToTopBtn.style.display = 'none';
+                }
+            });
+            scrollToTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // Form submission (mock for the sake of demo)
+            const form = document.getElementById('whatsappForm');
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const feedback = document.getElementById('formFeedback');
+                feedback.classList.remove('hidden');
+                setTimeout(() => {
+                    feedback.classList.add('hidden');
+                    form.reset();
+                }, 2000);
+            });
+        });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+</body>
+</html>

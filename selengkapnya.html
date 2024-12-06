@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Foto Lengkap</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" />
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f3f4f6;
+            color: #333;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            justify-items: center;
+            padding: 20px;
+        }
+        .gallery a {
+            display: block;
+            overflow: hidden;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            transform: rotate(var(--rotate, 0deg));
+            width: var(--width, 100%);
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .gallery a:hover img {
+            transform: scale(1.05);
+        }
+        .gallery a:hover {
+            transform: scale(1.05) rotate(var(--rotate, 0deg));
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        }
+        .gallery a.large {
+            --width: 150%;
+            --rotate: 5deg;
+        }
+        .gallery a.small {
+            --width: 60%;
+            --rotate: -5deg;
+        }
+        .gallery a.mini {
+            --width: 40%;
+            --rotate: 10deg;
+        }
+        .gallery a.absurd {
+            --width: 80%;
+            --rotate: -20deg;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="bg-gray-600 text-white py-20 text-center">
+        <h1 class="text-5xl font-extrabold">Galeri Foto Lengkap</h1>
+        <p class="mt-6 text-lg font-light italic max-w-2xl mx-auto">
+            "Kenangan indah yang terpatri dalam setiap momen bersama guru tercinta."
+        </p>
+    </header>
+
+    <!-- Full Gallery Section -->
+    <section class="bg-white py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-600">Potret Indah Kebersamaan</h2>
+            <div class="mt-12 gallery">
+                <!-- Gallery Images with Different Sizes, Rotations, and Effects -->
+                <a href="./asset/WhatsApp Image 2024-12-06 at 17.35.16_5cb03cb7.jpg" data-lightbox="gallery" class="rounded-xl shadow-md hover:shadow-lg transition-shadow large">
+                    <img src="./asset/WhatsApp Image 2024-12-06 at 17.35.16_5cb03cb7.jpg" alt="Foto 1" class="rounded-xl">
+                </a>
+                <a href="./asset/WhatsApp Image 2024-12-06 at 18.41.13_9fa0d8f2.jpg" data-lightbox="gallery" class="rounded-xl shadow-md hover:shadow-lg transition-shadow small">
+                    <img src="./asset/WhatsApp Image 2024-12-06 at 18.41.13_9fa0d8f2.jpg" alt="Foto 2" class="rounded-xl">
+                </a>
+                <a href="./asset/WhatsApp Image 2024-12-06 at 20.20.43_04e0ffb3.jpg" data-lightbox="gallery" class="rounded-xl shadow-md hover:shadow-lg transition-shadow mini">
+                    <img src="./asset/WhatsApp Image 2024-12-06 at 20.20.43_04e0ffb3.jpg" alt="Foto 3" class="rounded-xl">
+                </a>
+                <a href="./asset/WhatsApp Image 2024-12-06 at 20.20.43_04e0ffb3.jpg" data-lightbox="gallery" class="rounded-xl shadow-md hover:shadow-lg transition-shadow absurd">
+                    <img src="./asset/WhatsApp Image 2024-12-06 at 20.20.43_04e0ffb3.jpg" alt="Foto 4" class="rounded-xl">
+                </a>
+                <a href="./asset/WhatsApp Image 2024-12-06 at 20.27.36_941bf28e.jpg" data-lightbox="gallery" class="rounded-xl shadow-md hover:shadow-lg transition-shadow large">
+                    <img src="./asset/WhatsApp Image 2024-12-06 at 20.27.36_941bf28e.jpg" alt="Foto 5" class="rounded-xl">
+                </a>
+                <a href="https://via.placeholder.com/600" data-lightbox="gallery" class="rounded-xl shadow-md hover:shadow-lg transition-shadow small">
+                    <img src="https://via.placeholder.com/300" alt="Foto 6" class="rounded-xl">
+                </a>
+                <a href="https://via.placeholder.com/600" data-lightbox="gallery" class="rounded-xl shadow-md hover:shadow-lg transition-shadow mini">
+                    <img src="https://via.placeholder.com/300" alt="Foto 7" class="rounded-xl">
+                </a>
+                <a href="https://via.placeholder.com/600" data-lightbox="gallery" class="rounded-xl shadow-md hover:shadow-lg transition-shadow absurd">
+                    <img src="https://via.placeholder.com/300" alt="Foto 8" class="rounded-xl">
+                </a>
+                <a href="https://via.placeholder.com/600" data-lightbox="gallery" class="rounded-xl shadow-md hover:shadow-lg transition-shadow large">
+                    <img src="https://via.placeholder.com/300" alt="Foto 9" class="rounded-xl">
+                </a>
+                <a href="./asset/WhatsApp Image 2024-12-06 at 20.27.36_941bf28e.jpg" data-lightbox="gallery" class="rounded-xl shadow-md hover:shadow-lg transition-shadow small">
+                    <img src="./asset/WhatsApp Image 2024-12-06 at 20.27.36_941bf28e.jpg" alt="Foto 10" class="rounded-xl">
+                </a>
+                <!-- Add more image blocks (up to 60 images) following the same pattern above -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Home Button -->
+    <div class="text-center mt-8">
+        <a href="index.html" class="px-6 py-3 text-white bg-gray-600 rounded-lg hover:bg-gray-700 transition duration-300">
+            Kembali ke Beranda
+        </a>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+</body>
+</html>
